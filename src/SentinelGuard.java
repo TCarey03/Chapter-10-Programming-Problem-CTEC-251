@@ -29,4 +29,9 @@ public class SentinelGuard {
     public void loseTarget() {
         currentState.loseTarget();
     }
+
+    public void displayState() {
+        System.out.println("Current state: " +
+                currentState.getClass().getSimpleName());
+    }
 }
