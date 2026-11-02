@@ -25,3 +25,13 @@ In Phase 3, I added a new SleepingState class that implements the GuardState int
 I only had to create the SleepingState class and update the SentinelGuard constructor so the guard could start in the new state. I also updated Main.java to test the new behavior.
 
 The existing IdleState, PatrollingState, and AttackingState classes did not need to be changed. This demonstrates the Open/Closed Principle because the program can be extended with new behavior without modifying the existing state classes.
+
+---------------------
+
+Phase 4 Journal – Validation and Reflection
+
+In Phase 4, I tested the different states of my SentinelGuard program to make sure the transitions worked correctly. I started the guard in the Sleeping state and tested hearing noise, seeing an enemy, and losing a target. I also tested the Idle state to make sure the guard displayed the correct message when there was no target to lose.
+
+Comparing Phase 1 to Phase 4, I found the State Pattern more extensible and easier to maintain. In Phase 1, I had to use multiple conditional statements to control the guard's behavior. In Phase 4, each state had its own class that handled its behavior.
+
+The State Pattern made the program easier to organize because each class had a specific responsibility. Although it required creating more classes, I think this approach would be better for a larger professional project because adding new states does not require changing all the existing state classes.
