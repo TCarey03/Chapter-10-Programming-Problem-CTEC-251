@@ -15,3 +15,13 @@ In Phase 2, I changed my program to use the State Pattern. I created a GuardStat
 The SentinelGuard class is the Context because it holds the current state and passes actions to the correct state object. Each state class is responsible for its own behavior and transitions.
 
 Delegating to separate objects makes the code cleaner because I don't need multiple if/else or switch statements in SentinelGuard. It also makes adding new states easier because each state can have its own class.
+
+---------------------
+
+Phase 3 Journal – Open/Closed Principle
+
+In Phase 3, I added a new SleepingState class that implements the GuardState interface. The guard can now ignore enemies while sleeping, stay asleep when losing a target, and wake up when hearing a noise.
+
+I only had to create the SleepingState class and update the SentinelGuard constructor so the guard could start in the new state. I also updated Main.java to test the new behavior.
+
+The existing IdleState, PatrollingState, and AttackingState classes did not need to be changed. This demonstrates the Open/Closed Principle because the program can be extended with new behavior without modifying the existing state classes.
